@@ -19,7 +19,7 @@ import jakarta.annotation.Generated;
  * StartDebugSessionRequest
  */
 @JsonTypeName("startDebugSession_request")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-06T03:07:24.471763475Z[GMT]")public class StartDebugSessionRequest {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-06T05:01:44.455851395Z[GMT]")public class StartDebugSessionRequest {
 
   private String title;
 

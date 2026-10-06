@@ -23,7 +23,7 @@ import jakarta.annotation.Generated;
  * SessionListContentInner
  */
 @JsonTypeName("SessionList_content_inner")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-06T03:07:24.471763475Z[GMT]")public class SessionListContentInner {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-06T05:01:44.455851395Z[GMT]")public class SessionListContentInner {
 
   private UUID sessionId;
 
