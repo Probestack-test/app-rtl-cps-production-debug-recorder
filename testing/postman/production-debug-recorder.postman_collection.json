@@ -1,0 +1,780 @@
+{
+  "info" : {
+    "_postman_id" : "39191ba7-42e3-44eb-84e8-5148062e69ce",
+    "name" : "Production Debug Recorder",
+    "description" : "Generated Postman collection for production-debug-recorder",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable" : [ {
+    "key" : "baseUrl",
+    "value" : "http://localhost:8080",
+    "type" : "string"
+  }, {
+    "key" : "bearerToken",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "resourceId",
+    "value" : "sample-id",
+    "type" : "string"
+  }, {
+    "key" : "clientId",
+    "value" : "generated-service-client",
+    "type" : "string"
+  }, {
+    "key" : "clientSecret",
+    "value" : "change-me",
+    "type" : "string"
+  }, {
+    "key" : "scope",
+    "value" : "api.read api.write",
+    "type" : "string"
+  } ],
+  "item" : [ {
+    "name" : "Health",
+    "item" : [ {
+      "name" : "Health",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/health",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "health" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/health",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "health" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Liveness",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/health/liveness",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "health", "liveness" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/health/liveness",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "health", "liveness" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Readiness",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/health/readiness",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "health", "readiness" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/health/readiness",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "health", "readiness" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Metrics",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/metrics",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "metrics" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/metrics",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "metrics" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Prometheus",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/prometheus",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "prometheus" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/prometheus",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "prometheus" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    } ]
+  }, {
+    "name" : "Security",
+    "item" : [ {
+      "name" : "Get OAuth2 Token",
+      "request" : {
+        "auth" : {
+          "type" : "basic",
+          "basic" : [ {
+            "key" : "username",
+            "value" : "{{clientId}}",
+            "type" : "string"
+          }, {
+            "key" : "password",
+            "value" : "{{clientSecret}}",
+            "type" : "string"
+          } ]
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/x-www-form-urlencoded"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "body" : {
+          "mode" : "urlencoded",
+          "urlencoded" : [ {
+            "key" : "grant_type",
+            "value" : "client_credentials",
+            "type" : "text"
+          }, {
+            "key" : "scope",
+            "value" : "{{scope}}",
+            "type" : "text"
+          } ]
+        },
+        "url" : {
+          "raw" : "{{baseUrl}}/oauth2/token",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "oauth2", "token" ]
+        }
+      },
+      "event" : [ {
+        "listen" : "test",
+        "script" : {
+          "type" : "text/javascript",
+          "exec" : [ "const json = pm.response.json();", "if (json.access_token) {", "  pm.collectionVariables.set(\"bearerToken\", json.access_token);", "}" ]
+        }
+      } ]
+    } ]
+  }, {
+    "name" : "Replays",
+    "item" : [ {
+      "name" : "Search and list past debug sessions",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-06T03:07:26.788296307Z&toDate=2026-10-06T03:07:26.788355088Z&page=1&size=1",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "sessions" ],
+          "query" : [ {
+            "key" : "q",
+            "value" : "thread pool exhaustion"
+          }, {
+            "key" : "engineerId",
+            "value" : "amit.kumar@forgesphere.example.com"
+          }, {
+            "key" : "targetSystem",
+            "value" : "payment-processor"
+          }, {
+            "key" : "incidentId",
+            "value" : "INC-2050"
+          }, {
+            "key" : "bookmarkType",
+            "value" : "MILESTONE"
+          }, {
+            "key" : "status",
+            "value" : "RECORDING"
+          }, {
+            "key" : "fromDate",
+            "value" : "2026-10-06T03:07:26.788475639Z"
+          }, {
+            "key" : "toDate",
+            "value" : "2026-10-06T03:07:26.788492319Z"
+          }, {
+            "key" : "page",
+            "value" : 1
+          }, {
+            "key" : "size",
+            "value" : 1
+          } ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-06T03:07:26.788296307Z&toDate=2026-10-06T03:07:26.788355088Z&page=1&size=1",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions" ],
+            "query" : [ {
+              "key" : "q",
+              "value" : "thread pool exhaustion"
+            }, {
+              "key" : "engineerId",
+              "value" : "amit.kumar@forgesphere.example.com"
+            }, {
+              "key" : "targetSystem",
+              "value" : "payment-processor"
+            }, {
+              "key" : "incidentId",
+              "value" : "INC-2050"
+            }, {
+              "key" : "bookmarkType",
+              "value" : "MILESTONE"
+            }, {
+              "key" : "status",
+              "value" : "RECORDING"
+            }, {
+              "key" : "fromDate",
+              "value" : "2026-10-06T03:07:26.788475639Z"
+            }, {
+              "key" : "toDate",
+              "value" : "2026-10-06T03:07:26.788492319Z"
+            }, {
+              "key" : "page",
+              "value" : 1
+            }, {
+              "key" : "size",
+              "value" : 1
+            } ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"content\" : [ {\n    \"durationSeconds\" : 1245,\n    \"totalSteps\" : 42,\n    \"startedAt\" : 948603367000,\n    \"matchHighlights\" : [ \"...HikariCP pool maxed at 20, wait queue at 500ms+...\", \"...connection pool exhaustion confirmed via metrics...\" ],\n    \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"title\" : \"Payment timeout investigation - 2026-10-06\",\n    \"targetSystem\" : \"payment-processor\",\n    \"environment\" : \"PRODUCTION\",\n    \"rootCauseSummary\" : \"Thread pool exhaustion caused by slow downstream API.\",\n    \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n    \"bookmarksCount\" : 3,\n    \"incidentId\" : \"INC-2050\",\n    \"status\" : \"COMPLETED\"\n  }, {\n    \"durationSeconds\" : 1245,\n    \"totalSteps\" : 42,\n    \"startedAt\" : 948603367000,\n    \"matchHighlights\" : [ \"...HikariCP pool maxed at 20, wait queue at 500ms+...\", \"...connection pool exhaustion confirmed via metrics...\" ],\n    \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"title\" : \"Payment timeout investigation - 2026-10-06\",\n    \"targetSystem\" : \"payment-processor\",\n    \"environment\" : \"PRODUCTION\",\n    \"rootCauseSummary\" : \"Thread pool exhaustion caused by slow downstream API.\",\n    \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n    \"bookmarksCount\" : 3,\n    \"incidentId\" : \"INC-2050\",\n    \"status\" : \"COMPLETED\"\n  } ],\n  \"totalElements\" : 342,\n  \"totalPages\" : 18,\n  \"page\" : 0,\n  \"size\" : 20\n}"
+      }, {
+        "name" : "Bad Request",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-06T03:07:26.788296307Z&toDate=2026-10-06T03:07:26.788355088Z&page=1&size=1",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions" ],
+            "query" : [ {
+              "key" : "q",
+              "value" : "thread pool exhaustion"
+            }, {
+              "key" : "engineerId",
+              "value" : "amit.kumar@forgesphere.example.com"
+            }, {
+              "key" : "targetSystem",
+              "value" : "payment-processor"
+            }, {
+              "key" : "incidentId",
+              "value" : "INC-2050"
+            }, {
+              "key" : "bookmarkType",
+              "value" : "MILESTONE"
+            }, {
+              "key" : "status",
+              "value" : "RECORDING"
+            }, {
+              "key" : "fromDate",
+              "value" : "2026-10-06T03:07:26.788475639Z"
+            }, {
+              "key" : "toDate",
+              "value" : "2026-10-06T03:07:26.788492319Z"
+            }, {
+              "key" : "page",
+              "value" : 1
+            }, {
+              "key" : "size",
+              "value" : 1
+            } ]
+          }
+        },
+        "status" : "Bad Request",
+        "code" : 400,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-10-06T03:07:26.791662569Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    } ]
+  }, {
+    "name" : "Sessions",
+    "item" : [ {
+      "name" : "Start a new production debug recording session",
+      "request" : {
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/sessions",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "sessions" ]
+        },
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"title\" : \"Payment timeout investigation - 2026-10-06\",\n  \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n  \"targetSystem\" : \"payment-processor\",\n  \"environment\" : \"PRODUCTION\",\n  \"purpose\" : \"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\n  \"incidentId\" : \"INC-2050\",\n  \"maxDurationMinutes\" : 120,\n  \"captureMode\" : \"SHELL_AND_HTTP\",\n  \"redactPatterns\" : [ \"password=.*\", \"token=.*\", \"\\\\b\\\\d{16}\\\\b\" ],\n  \"shareWith\" : [ \"payments-team\", \"sre-team@forgesphere.example.com\" ]\n}",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        }
+      },
+      "response" : [ {
+        "name" : "Created",
+        "originalRequest" : {
+          "method" : "POST",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Content-Type",
+            "value" : "application/json"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions" ]
+          },
+          "body" : {
+            "mode" : "raw",
+            "raw" : "{\n  \"title\" : \"Payment timeout investigation - 2026-10-06\",\n  \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n  \"targetSystem\" : \"payment-processor\",\n  \"environment\" : \"PRODUCTION\",\n  \"purpose\" : \"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\n  \"incidentId\" : \"INC-2050\",\n  \"maxDurationMinutes\" : 120,\n  \"captureMode\" : \"SHELL_AND_HTTP\",\n  \"redactPatterns\" : [ \"password=.*\", \"token=.*\", \"\\\\b\\\\d{16}\\\\b\" ],\n  \"shareWith\" : [ \"payments-team\", \"sre-team@forgesphere.example.com\" ]\n}",
+            "options" : {
+              "raw" : {
+                "language" : "json"
+              }
+            }
+          }
+        },
+        "status" : "Created",
+        "code" : 201,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"sessionId\" : \"9c8f1a3b-6d7e-4a12-8f5e-123456789abc\",\n  \"title\" : \"Payment timeout investigation - 2026-10-06\",\n  \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n  \"engineerName\" : \"Amit Kumar\",\n  \"targetSystem\" : \"payment-processor\",\n  \"environment\" : \"PRODUCTION\",\n  \"purpose\" : \"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\n  \"incidentId\" : \"INC-2050\",\n  \"status\" : \"COMPLETED\",\n  \"captureMode\" : \"SHELL_AND_HTTP\",\n  \"startedAt\" : 948603367000,\n  \"endedAt\" : 948603367000,\n  \"durationSeconds\" : 1245,\n  \"recordedSteps\" : [ {\n    \"annotation\" : \"Normal backlog is <100; this confirms queue buildup.\",\n    \"bookmarkId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"stepType\" : \"SQL_QUERY\",\n    \"bookmarked\" : false,\n    \"stepId\" : \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"error\" : \"error\",\n    \"target\" : \"payment-db-prod\",\n    \"output\" : \"count: 42817\",\n    \"action\" : \"SELECT count(*) FROM payment_orders WHERE status='PENDING' AND created_at < NOW() - INTERVAL '5 min'\",\n    \"exitCode\" : 0,\n    \"stepNumber\" : 12,\n    \"durationMs\" : 245,\n    \"timestamp\" : 948603367000\n  }, {\n    \"annotation\" : \"Normal backlog is <100; this confirms queue buildup.\",\n    \"bookmarkId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"stepType\" : \"SQL_QUERY\",\n    \"bookmarked\" : false,\n    \"stepId\" : \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"error\" : \"error\",\n    \"target\" : \"payment-db-prod\",\n    \"output\" : \"count: 42817\",\n    \"action\" : \"SELECT count(*) FROM payment_orders WHERE status='PENDING' AND created_at < NOW() - INTERVAL '5 min'\",\n    \"exitCode\" : 0,\n    \"stepNumber\" : 12,\n    \"durationMs\" : 245,\n    \"timestamp\" : 948603367000\n  } ],\n  \"bookmarks\" : [ {\n    \"createdAt\" : 948603367000,\n    \"bookmarkId\" : \"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"createdBy\" : \"amit.kumar@forgesphere.example.com\",\n    \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n    \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"title\" : \"Root cause identified: thread pool exhaustion\",\n    \"bookmarkType\" : \"ROOT_CAUSE\",\n    \"timestamp\" : 1791297138000\n  }, {\n    \"createdAt\" : 948603367000,\n    \"bookmarkId\" : \"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"createdBy\" : \"amit.kumar@forgesphere.example.com\",\n    \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n    \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"title\" : \"Root cause identified: thread pool exhaustion\",\n    \"bookmarkType\" : \"ROOT_CAUSE\",\n    \"timestamp\" : 1791297138000\n  } ],\n  \"shareWith\" : [ \"payments-team\", \"sre-team@forgesphere.example.com\" ],\n  \"redactPatterns\" : [ \"password=.*\", \"token=.*\" ],\n  \"summary\" : {\n    \"deadEndsCount\" : 3,\n    \"rootCause\" : \"Thread pool exhaustion caused by slow downstream API.\",\n    \"totalSteps\" : 42,\n    \"fixApplied\" : \"Increased HikariCP pool from 20 to 50; added circuit breaker.\",\n    \"timeToRootCauseMinutes\" : 18\n  },\n  \"recordedBy\" : \"amit.kumar@forgesphere.example.com\",\n  \"auditReference\" : \"audit://debug-recorder/session-9c8f1a3b\"\n}"
+      }, {
+        "name" : "Bad Request",
+        "originalRequest" : {
+          "method" : "POST",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Content-Type",
+            "value" : "application/json"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions" ]
+          },
+          "body" : {
+            "mode" : "raw",
+            "raw" : "{\n  \"title\" : \"Payment timeout investigation - 2026-10-06\",\n  \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n  \"targetSystem\" : \"payment-processor\",\n  \"environment\" : \"PRODUCTION\",\n  \"purpose\" : \"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\n  \"incidentId\" : \"INC-2050\",\n  \"maxDurationMinutes\" : 120,\n  \"captureMode\" : \"SHELL_AND_HTTP\",\n  \"redactPatterns\" : [ \"password=.*\", \"token=.*\", \"\\\\b\\\\d{16}\\\\b\" ],\n  \"shareWith\" : [ \"payments-team\", \"sre-team@forgesphere.example.com\" ]\n}",
+            "options" : {
+              "raw" : {
+                "language" : "json"
+              }
+            }
+          }
+        },
+        "status" : "Bad Request",
+        "code" : 400,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-10-06T03:07:26.792368926Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    }, {
+      "name" : "Get the details and full recording of a debug session",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/sessions/9c8f1a3b-6d7e-4a12-8f5e-123456789abc?includeOutput=true&redacted=true",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "sessions", "9c8f1a3b-6d7e-4a12-8f5e-123456789abc" ],
+          "query" : [ {
+            "key" : "includeOutput",
+            "value" : true
+          }, {
+            "key" : "redacted",
+            "value" : true
+          } ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions/9c8f1a3b-6d7e-4a12-8f5e-123456789abc?includeOutput=true&redacted=true",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions", "9c8f1a3b-6d7e-4a12-8f5e-123456789abc" ],
+            "query" : [ {
+              "key" : "includeOutput",
+              "value" : true
+            }, {
+              "key" : "redacted",
+              "value" : true
+            } ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"sessionId\" : \"9c8f1a3b-6d7e-4a12-8f5e-123456789abc\",\n  \"title\" : \"Payment timeout investigation - 2026-10-06\",\n  \"engineerId\" : \"amit.kumar@forgesphere.example.com\",\n  \"engineerName\" : \"Amit Kumar\",\n  \"targetSystem\" : \"payment-processor\",\n  \"environment\" : \"PRODUCTION\",\n  \"purpose\" : \"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\n  \"incidentId\" : \"INC-2050\",\n  \"status\" : \"COMPLETED\",\n  \"captureMode\" : \"SHELL_AND_HTTP\",\n  \"startedAt\" : 948603367000,\n  \"endedAt\" : 948603367000,\n  \"durationSeconds\" : 1245,\n  \"recordedSteps\" : [ {\n    \"annotation\" : \"Normal backlog is <100; this confirms queue buildup.\",\n    \"bookmarkId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"stepType\" : \"SQL_QUERY\",\n    \"bookmarked\" : false,\n    \"stepId\" : \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"error\" : \"error\",\n    \"target\" : \"payment-db-prod\",\n    \"output\" : \"count: 42817\",\n    \"action\" : \"SELECT count(*) FROM payment_orders WHERE status='PENDING' AND created_at < NOW() - INTERVAL '5 min'\",\n    \"exitCode\" : 0,\n    \"stepNumber\" : 12,\n    \"durationMs\" : 245,\n    \"timestamp\" : 948603367000\n  }, {\n    \"annotation\" : \"Normal backlog is <100; this confirms queue buildup.\",\n    \"bookmarkId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"stepType\" : \"SQL_QUERY\",\n    \"bookmarked\" : false,\n    \"stepId\" : \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"error\" : \"error\",\n    \"target\" : \"payment-db-prod\",\n    \"output\" : \"count: 42817\",\n    \"action\" : \"SELECT count(*) FROM payment_orders WHERE status='PENDING' AND created_at < NOW() - INTERVAL '5 min'\",\n    \"exitCode\" : 0,\n    \"stepNumber\" : 12,\n    \"durationMs\" : 245,\n    \"timestamp\" : 948603367000\n  } ],\n  \"bookmarks\" : [ {\n    \"createdAt\" : 948603367000,\n    \"bookmarkId\" : \"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"createdBy\" : \"amit.kumar@forgesphere.example.com\",\n    \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n    \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"title\" : \"Root cause identified: thread pool exhaustion\",\n    \"bookmarkType\" : \"ROOT_CAUSE\",\n    \"timestamp\" : 1791297138000\n  }, {\n    \"createdAt\" : 948603367000,\n    \"bookmarkId\" : \"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\n    \"createdBy\" : \"amit.kumar@forgesphere.example.com\",\n    \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n    \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"title\" : \"Root cause identified: thread pool exhaustion\",\n    \"bookmarkType\" : \"ROOT_CAUSE\",\n    \"timestamp\" : 1791297138000\n  } ],\n  \"shareWith\" : [ \"payments-team\", \"sre-team@forgesphere.example.com\" ],\n  \"redactPatterns\" : [ \"password=.*\", \"token=.*\" ],\n  \"summary\" : {\n    \"deadEndsCount\" : 3,\n    \"rootCause\" : \"Thread pool exhaustion caused by slow downstream API.\",\n    \"totalSteps\" : 42,\n    \"fixApplied\" : \"Increased HikariCP pool from 20 to 50; added circuit breaker.\",\n    \"timeToRootCauseMinutes\" : 18\n  },\n  \"recordedBy\" : \"amit.kumar@forgesphere.example.com\",\n  \"auditReference\" : \"audit://debug-recorder/session-9c8f1a3b\"\n}"
+      }, {
+        "name" : "Not Found",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions/9c8f1a3b-6d7e-4a12-8f5e-123456789abc?includeOutput=true&redacted=true",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions", "9c8f1a3b-6d7e-4a12-8f5e-123456789abc" ],
+            "query" : [ {
+              "key" : "includeOutput",
+              "value" : true
+            }, {
+              "key" : "redacted",
+              "value" : true
+            } ]
+          }
+        },
+        "status" : "Not Found",
+        "code" : 404,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-10-06T03:07:26.792820690Z\",\n  \"status\" : 404,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    }, {
+      "name" : "Add a bookmark to an active debug session",
+      "request" : {
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/sessions/sample-id/bookmarks",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "sessions", "sample-id", "bookmarks" ]
+        },
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"timestamp\" : 1791297138000,\n  \"title\" : \"Root cause identified: thread pool exhaustion\",\n  \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n  \"bookmarkType\" : \"ROOT_CAUSE\"\n}",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        }
+      },
+      "response" : [ {
+        "name" : "Created",
+        "originalRequest" : {
+          "method" : "POST",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Content-Type",
+            "value" : "application/json"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions/sample-id/bookmarks",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions", "sample-id", "bookmarks" ]
+          },
+          "body" : {
+            "mode" : "raw",
+            "raw" : "{\n  \"timestamp\" : 1791297138000,\n  \"title\" : \"Root cause identified: thread pool exhaustion\",\n  \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n  \"bookmarkType\" : \"ROOT_CAUSE\"\n}",
+            "options" : {
+              "raw" : {
+                "language" : "json"
+              }
+            }
+          }
+        },
+        "status" : "Created",
+        "code" : 201,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"bookmarkId\" : \"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\n  \"sessionId\" : \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n  \"timestamp\" : 1791297138000,\n  \"title\" : \"Root cause identified: thread pool exhaustion\",\n  \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n  \"bookmarkType\" : \"ROOT_CAUSE\",\n  \"createdAt\" : 948603367000,\n  \"createdBy\" : \"amit.kumar@forgesphere.example.com\"\n}"
+      }, {
+        "name" : "Bad Request",
+        "originalRequest" : {
+          "method" : "POST",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Content-Type",
+            "value" : "application/json"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/sessions/sample-id/bookmarks",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "sessions", "sample-id", "bookmarks" ]
+          },
+          "body" : {
+            "mode" : "raw",
+            "raw" : "{\n  \"timestamp\" : 1791297138000,\n  \"title\" : \"Root cause identified: thread pool exhaustion\",\n  \"description\" : \"HikariCP pool maxed at 20, wait queue at 500ms+.\",\n  \"bookmarkType\" : \"ROOT_CAUSE\"\n}",
+            "options" : {
+              "raw" : {
+                "language" : "json"
+              }
+            }
+          }
+        },
+        "status" : "Bad Request",
+        "code" : 400,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-10-06T03:07:26.793090513Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,142 @@
+{
+  "info" : {
+    "name" : "production-debug-recorder Mock Test Collection",
+    "description" : "Generated from ForgeSphere mock endpoint definitions.",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable" : [ {
+    "key" : "mockBaseUrl",
+    "value" : "https://forgesphere.probestack.io/mock-api/v1/api/mocks/mock-4f986354"
+  }, {
+    "key" : "userEmail",
+    "value" : ""
+  }, {
+    "key" : "id",
+    "value" : "sample-id"
+  } ],
+  "item" : [ {
+    "name" : "GET /sessions",
+    "request" : {
+      "method" : "GET",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/sessions"
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 200",
+      "code" : 200,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "{\"content\":[{\"sessionId\":\"00000000-0000-0000-0000-000000000000\",\"title\":\"Payment timeout investigation - 2026-10-06\",\"engineerId\":\"amit.kumar@forgesphere.example.com\",\"targetSystem\":\"payment-processor\",\"environment\":\"PRODUCTION\",\"status\":\"COMPLETED\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"durationSeconds\":1245,\"totalSteps\":42,\"bookmarksCount\":3,\"rootCauseSummary\":\"Thread pool exhaustion caused by slow downstream API.\",\"incidentId\":\"INC-2050\",\"matchHighlights\":[\"...HikariCP pool maxed at 20, wait queue at 500ms+...\",\"...connection pool exhaustion confirmed via metrics...\"]}],\"totalElements\":342,\"totalPages\":18,\"page\":0,\"size\":20}"
+    } ]
+  }, {
+    "name" : "POST /sessions",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/sessions"
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\"title\":\"Payment timeout investigation - 2026-10-06\",\"engineerId\":\"amit.kumar@forgesphere.example.com\",\"targetSystem\":\"payment-processor\",\"environment\":\"PRODUCTION\",\"purpose\":\"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\"incidentId\":\"INC-2050\",\"maxDurationMinutes\":120,\"captureMode\":\"SHELL_AND_HTTP\",\"redactPatterns\":[\"password=.*\",\"token=.*\",\"\\\\b\\\\d{16}\\\\b\"],\"shareWith\":[\"payments-team\",\"sre-team@forgesphere.example.com\"]}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 201",
+      "code" : 201,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "{\"sessionId\":\"9c8f1a3b-6d7e-4a12-8f5e-123456789abc\",\"title\":\"Payment timeout investigation - 2026-10-06\",\"engineerId\":\"amit.kumar@forgesphere.example.com\",\"engineerName\":\"Amit Kumar\",\"targetSystem\":\"payment-processor\",\"environment\":\"PRODUCTION\",\"purpose\":\"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\"incidentId\":\"INC-2050\",\"status\":\"COMPLETED\",\"captureMode\":\"SHELL_AND_HTTP\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:00:00Z\",\"durationSeconds\":1245,\"recordedSteps\":[{\"stepId\":\"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\"stepNumber\":12,\"stepType\":\"SQL_QUERY\",\"timestamp\":\"2024-01-01T00:00:00Z\",\"action\":\"SELECT count(*) FROM payment_orders WHERE status='PENDING' AND created_at < NOW() - INTERVAL '5 min'\",\"target\":\"payment-db-prod\",\"output\":\"count: 42817\",\"durationMs\":245,\"exitCode\":0,\"error\":\"string\",\"annotation\":\"Normal backlog is <100; this confirms queue buildup.\",\"bookmarked\":false,\"bookmarkId\":\"00000000-0000-0000-0000-000000000000\"}],\"bookmarks\":[{\"bookmarkId\":\"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\"sessionId\":\"00000000-0000-0000-0000-000000000000\",\"timestamp\":\"2026-10-06T14:32:18Z\",\"title\":\"Root cause identified: thread pool exhaustion\",\"description\":\"HikariCP pool maxed at 20, wait queue at 500ms+.\",\"bookmarkType\":\"ROOT_CAUSE\",\"createdAt\":\"2024-01-01T00:00:00Z\",\"createdBy\":\"amit.kumar@forgesphere.example.com\"}],\"shareWith\":[\"payments-team\",\"sre-team@forgesphere.example.com\"],\"redactPatterns\":[\"password=.*\",\"token=.*\"],\"summary\":{\"rootCause\":\"Thread pool exhaustion caused by slow downstream API.\",\"fixApplied\":\"Increased HikariCP pool from 20 to 50; added circuit breaker.\",\"totalSteps\":42,\"deadEndsCount\":3,\"timeToRootCauseMinutes\":18},\"recordedBy\":\"amit.kumar@forgesphere.example.com\",\"auditReference\":\"audit://debug-recorder/session-9c8f1a3b\"}"
+    } ]
+  }, {
+    "name" : "GET /sessions/{sessionId}",
+    "request" : {
+      "method" : "GET",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/sessions/{sessionId}"
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 200",
+      "code" : 200,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "{\"sessionId\":\"9c8f1a3b-6d7e-4a12-8f5e-123456789abc\",\"title\":\"Payment timeout investigation - 2026-10-06\",\"engineerId\":\"amit.kumar@forgesphere.example.com\",\"engineerName\":\"Amit Kumar\",\"targetSystem\":\"payment-processor\",\"environment\":\"PRODUCTION\",\"purpose\":\"Investigating 5xx spike on /charge endpoint since 14:00 UTC.\",\"incidentId\":\"INC-2050\",\"status\":\"COMPLETED\",\"captureMode\":\"SHELL_AND_HTTP\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:00:00Z\",\"durationSeconds\":1245,\"recordedSteps\":[{\"stepId\":\"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\"stepNumber\":12,\"stepType\":\"SQL_QUERY\",\"timestamp\":\"2024-01-01T00:00:00Z\",\"action\":\"SELECT count(*) FROM payment_orders WHERE status='PENDING' AND created_at < NOW() - INTERVAL '5 min'\",\"target\":\"payment-db-prod\",\"output\":\"count: 42817\",\"durationMs\":245,\"exitCode\":0,\"error\":\"string\",\"annotation\":\"Normal backlog is <100; this confirms queue buildup.\",\"bookmarked\":false,\"bookmarkId\":\"00000000-0000-0000-0000-000000000000\"}],\"bookmarks\":[{\"bookmarkId\":\"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\"sessionId\":\"00000000-0000-0000-0000-000000000000\",\"timestamp\":\"2026-10-06T14:32:18Z\",\"title\":\"Root cause identified: thread pool exhaustion\",\"description\":\"HikariCP pool maxed at 20, wait queue at 500ms+.\",\"bookmarkType\":\"ROOT_CAUSE\",\"createdAt\":\"2024-01-01T00:00:00Z\",\"createdBy\":\"amit.kumar@forgesphere.example.com\"}],\"shareWith\":[\"payments-team\",\"sre-team@forgesphere.example.com\"],\"redactPatterns\":[\"password=.*\",\"token=.*\"],\"summary\":{\"rootCause\":\"Thread pool exhaustion caused by slow downstream API.\",\"fixApplied\":\"Increased HikariCP pool from 20 to 50; added circuit breaker.\",\"totalSteps\":42,\"deadEndsCount\":3,\"timeToRootCauseMinutes\":18},\"recordedBy\":\"amit.kumar@forgesphere.example.com\",\"auditReference\":\"audit://debug-recorder/session-9c8f1a3b\"}"
+    } ]
+  }, {
+    "name" : "POST /sessions/{sessionId}/bookmarks",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/sessions/{sessionId}/bookmarks"
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\"timestamp\":\"2026-10-06T14:32:18Z\",\"title\":\"Root cause identified: thread pool exhaustion\",\"description\":\"HikariCP pool maxed at 20, wait queue at 500ms+.\",\"bookmarkType\":\"ROOT_CAUSE\"}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 201",
+      "code" : 201,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "{\"bookmarkId\":\"b1a2c3d4-e5f6-7890-1234-567890abcdef\",\"sessionId\":\"00000000-0000-0000-0000-000000000000\",\"timestamp\":\"2026-10-06T14:32:18Z\",\"title\":\"Root cause identified: thread pool exhaustion\",\"description\":\"HikariCP pool maxed at 20, wait queue at 500ms+.\",\"bookmarkType\":\"ROOT_CAUSE\",\"createdAt\":\"2024-01-01T00:00:00Z\",\"createdBy\":\"amit.kumar@forgesphere.example.com\"}"
+    } ]
+  } ]
+}
