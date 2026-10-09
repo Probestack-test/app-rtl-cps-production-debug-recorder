@@ -1,6 +1,6 @@
 {
   "info" : {
-    "_postman_id" : "6e59391f-433f-4cf3-b455-80a3999cc60b",
+    "_postman_id" : "c3a403cc-6a3e-4c62-9b8c-9bb44444b915",
     "name" : "Production Debug Recorder",
     "description" : "Generated Postman collection for production-debug-recorder",
     "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -318,7 +318,7 @@
           "value" : "application/json"
         } ],
         "url" : {
-          "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-09T09:30:24.356320887Z&toDate=2026-10-09T09:30:24.356370671Z&page=1&size=1",
+          "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-09T09:59:30.609022075Z&toDate=2026-10-09T09:59:30.609072685Z&page=1&size=1",
           "host" : [ "{{baseUrl}}" ],
           "path" : [ "sessions" ],
           "query" : [ {
@@ -341,10 +341,10 @@
             "value" : "RECORDING"
           }, {
             "key" : "fromDate",
-            "value" : "2026-10-09T09:30:24.356497080Z"
+            "value" : "2026-10-09T09:59:30.609171568Z"
           }, {
             "key" : "toDate",
-            "value" : "2026-10-09T09:30:24.356512671Z"
+            "value" : "2026-10-09T09:59:30.609183018Z"
           }, {
             "key" : "page",
             "value" : 1
@@ -366,7 +366,7 @@
             "value" : "application/json"
           } ],
           "url" : {
-            "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-09T09:30:24.356320887Z&toDate=2026-10-09T09:30:24.356370671Z&page=1&size=1",
+            "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-09T09:59:30.609022075Z&toDate=2026-10-09T09:59:30.609072685Z&page=1&size=1",
             "host" : [ "{{baseUrl}}" ],
             "path" : [ "sessions" ],
             "query" : [ {
@@ -389,10 +389,10 @@
               "value" : "RECORDING"
             }, {
               "key" : "fromDate",
-              "value" : "2026-10-09T09:30:24.356497080Z"
+              "value" : "2026-10-09T09:59:30.609171568Z"
             }, {
               "key" : "toDate",
-              "value" : "2026-10-09T09:30:24.356512671Z"
+              "value" : "2026-10-09T09:59:30.609183018Z"
             }, {
               "key" : "page",
               "value" : 1
@@ -423,7 +423,7 @@
             "value" : "application/json"
           } ],
           "url" : {
-            "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-09T09:30:24.356320887Z&toDate=2026-10-09T09:30:24.356370671Z&page=1&size=1",
+            "raw" : "{{baseUrl}}/sessions?q=thread pool exhaustion&engineerId=amit.kumar@forgesphere.example.com&targetSystem=payment-processor&incidentId=INC-2050&bookmarkType=MILESTONE&status=RECORDING&fromDate=2026-10-09T09:59:30.609022075Z&toDate=2026-10-09T09:59:30.609072685Z&page=1&size=1",
             "host" : [ "{{baseUrl}}" ],
             "path" : [ "sessions" ],
             "query" : [ {
@@ -446,10 +446,10 @@
               "value" : "RECORDING"
             }, {
               "key" : "fromDate",
-              "value" : "2026-10-09T09:30:24.356497080Z"
+              "value" : "2026-10-09T09:59:30.609171568Z"
             }, {
               "key" : "toDate",
-              "value" : "2026-10-09T09:30:24.356512671Z"
+              "value" : "2026-10-09T09:59:30.609183018Z"
             }, {
               "key" : "page",
               "value" : 1
@@ -467,7 +467,7 @@
           "value" : "application/json"
         } ],
         "cookie" : [ ],
-        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:30:24.362244541Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:59:30.612250649Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
       } ]
     } ]
   }, {
@@ -576,7 +576,7 @@
           "value" : "application/json"
         } ],
         "cookie" : [ ],
-        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:30:24.362962303Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:59:30.612910008Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
       } ]
     }, {
       "name" : "Get the details and full recording of a debug session",
@@ -667,7 +667,7 @@
           "value" : "application/json"
         } ],
         "cookie" : [ ],
-        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:30:24.363406766Z\",\n  \"status\" : 404,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:59:30.613335020Z\",\n  \"status\" : 404,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
       } ]
     }, {
       "name" : "Add a bookmark to an active debug session",
@@ -773,7 +773,7 @@
           "value" : "application/json"
         } ],
         "cookie" : [ ],
-        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:30:24.363650542Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+        "body" : "{\n  \"timestamp\" : \"2026-10-09T09:59:30.613574771Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
       } ]
     } ]
   } ]

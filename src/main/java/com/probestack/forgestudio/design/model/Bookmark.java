@@ -19,7 +19,7 @@ import jakarta.annotation.Generated;
 /**
  * Bookmark
  */
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:30:22.044820552Z[GMT]")public class Bookmark {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:59:28.433573448Z[GMT]")public class Bookmark {
 
   private UUID bookmarkId;
 
