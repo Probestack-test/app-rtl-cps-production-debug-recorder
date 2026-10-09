@@ -20,7 +20,7 @@ import jakarta.annotation.Generated;
  * AddBookmarkRequest
  */
 @JsonTypeName("addBookmark_request")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:30:22.044820552Z[GMT]")public class AddBookmarkRequest {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:59:28.433573448Z[GMT]")public class AddBookmarkRequest {
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime timestamp;
