@@ -15,7 +15,7 @@ import jakarta.annotation.Generated;
  */
 @Schema(name = "DebugSession_summary", description = "AI-generated summary of the session.")
 @JsonTypeName("DebugSession_summary")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-06T05:01:44.455851395Z[GMT]")public class DebugSessionSummary {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:30:22.044820552Z[GMT]")public class DebugSessionSummary {
 
   private String rootCause;
 

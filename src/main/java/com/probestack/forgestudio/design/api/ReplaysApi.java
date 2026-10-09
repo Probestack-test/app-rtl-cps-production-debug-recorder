@@ -29,7 +29,7 @@ import jakarta.validation.constraints.*;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-06T05:01:44.455851395Z[GMT]")@Validated
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:30:22.044820552Z[GMT]")@Validated
 @Tag(name = "Replays", description = "Replay past debug sessions for learning.")
 public interface ReplaysApi {
 
