@@ -31,7 +31,7 @@ import jakarta.validation.constraints.*;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:30:22.044820552Z[GMT]")@Validated
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-09T09:59:28.433573448Z[GMT]")@Validated
 @Tag(name = "Sessions", description = "Start, record, and manage debugging sessions.")
 public interface SessionsApi {
 
